@@ -1,4 +1,4 @@
-﻿/* The following body represents the height , margin , padding of the html page */
+/* The following body represents the height , margin , padding of the html page */
 html, body {
     height: 100%;
     min-height: 100%;
@@ -65,7 +65,7 @@ html, body {
 
 /* Height of the content int the site */
 #site-content {
-    background : green;
+    background : black;
     height: calc(100% - 45px - 19px);
 }
 
