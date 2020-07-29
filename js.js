@@ -1,4 +1,4 @@
-﻿// RapidAPI Configuration (https://rapidapi.com/hermanzdosilovic/api/judge0)
+// RapidAPI Configuration (https://rapidapi.com/hermanzdosilovic/api/judge0)
 
 //"var" are the reserved keyword in java script , A variable must have a UNIQUE name...
 var apiUrl = "https://judge0.p.rapidapi.com";
@@ -17,6 +17,7 @@ var blinkStatusLine = ((localStorageGetItem("blink") || "true") === "true");
 var editorMode = localStorageGetItem("editorMode") || "normal";
 var redirectStderrToStdout = ((localStorageGetItem("redirectStderrToStdout") || "false") === "true");
 var editorModeObject = null;
+
 
 var fontSize = 14;
 
@@ -43,7 +44,6 @@ var $runBtn;
 var $navigationMessage;
 var $updates;
 var $statusLine;
-
 var timeStart;
 var timeEnd;
 
@@ -565,6 +565,7 @@ $(document).ready(function () {
     updateScreenElements();
 
     console.log("Hey, OnlineVK Compiler is open-sourced: https://github.com/OnlineVKCompiler/ide. Have fun!");
+    console.log("Reach me @ vigneshkumar.ec17@bitsathy.ac.in (or) +91 8754890649")
 
     $selectLanguage = $("#select-language");
     $selectLanguage.change(function (e) {
@@ -792,7 +793,8 @@ $(document).ready(function () {
     });
 });
 
-/* The following set of lines are the codes or lines , that is defaultly inserted or inbuilted in the required programming languages... If we choose one programming language then the default code of "Hello World" or "Hello!" program is inserted (Writed) inbuilt */
+
+/* The following set of lines are the codes or lines , that is defaultly inserted or inbuilted in the required programming languages... If we choose one programming language then the default code of "Welcome to my OnlineVKCompiler" program is inserted (Written) inbuilt */
 
 // Template Sources
 var assemblySource = "\
@@ -814,19 +816,19 @@ _start:\n\
 \n\
 section	.rodata\n\
 \n\
-msg	db 'hello, world', 0xa\n\
+msg	db 'Welcome to my Online VK Compiler, Have fun !', 0xa\n\
 len	equ	$ - msg\n\
 ";
 
-var bashSource = "echo \"hello, world\"";
+var bashSource = "echo \"Welcome to my Online VK Compiler, Have fun !\"";
 
-var basicSource = "PRINT \"hello, world\"";
+var basicSource = "PRINT \"Welcome to my Online VK Compiler, Have fun !\"";
 
 var cSource = "\
 #include <stdio.h>\n\
 \n\
 int main(void) {\n\
-    printf(\"hello, world\\n\");\n\
+    printf(\"Welcome to my Online VK Compiler, Have fun !\\n\");\n\
     return 0;\n\
 }\n\
 ";
@@ -834,7 +836,7 @@ int main(void) {\n\
 var csharpSource = "\
 public class Hello {\n\
     public static void Main() {\n\
-        System.Console.WriteLine(\"hello, world\");\n\
+        System.Console.WriteLine(\"Welcome to my Online VK Compiler, Have fun !\");\n\
     }\n\
 }\n\
 ";
@@ -843,37 +845,37 @@ var cppSource = "\
 #include <iostream>\n\
 \n\
 int main() {\n\
-    std::cout << \"hello, world\" << std::endl;\n\
+    std::cout << \"Welcome to my Online VK Compiler, Have fun !\" << std::endl;\n\
     return 0;\n\
 }\n\
 ";
 
-var clojureSource = "(println \"hello, world\")\n";
+var clojureSource = "(println \"Welcome to my Online VK Compiler, Have fun !\")\n";
 
 var cobolSource = "\
 IDENTIFICATION DIVISION.\n\
 PROGRAM-ID. MAIN.\n\
 PROCEDURE DIVISION.\n\
-DISPLAY \"hello, world\".\n\
+DISPLAY \"Welcome to my Online VK Compiler, Have fun !\".\n\
 STOP RUN.\n\
 ";
 
-var lispSource = "(write-line \"hello, world\")";
+var lispSource = "(write-line \"Welcome to my Online VK Compiler, Have fun !\")";
 
 var dSource = "\
 import std.stdio;\n\
 \n\
 void main()\n\
 {\n\
-    writeln(\"hello, world\");\n\
+    writeln(\"Welcome to my Online VK Compiler, Have fun !\");\n\
 }\n\
 ";
 
-var elixirSource = "IO.puts \"hello, world\"";
+var elixirSource = "IO.puts \"Welcome to my Online VK Compiler, Have fun !\"";
 
 var erlangSource = "\
 main(_) ->\n\
-    io:fwrite(\"hello, world\\n\").\n\
+    io:fwrite(\"Welcome to my Online VK Compiler, Have fun !\\n\").\n\
 ";
 
 var executableSource = "\
@@ -882,17 +884,17 @@ OnlineVK Compiler IDE assumes that content of executable is Base64 encoded.\n\
 This means that you should Base64 encode content of your binary,\n\
 paste it here and click \"Run\".\n\
 \n\
-Here is an example of compiled \"hello, world\" NASM program.\n\
+Here is an example of compiled \"Welcome to my Online VK Compiler, Have fun !\" NASM program.\n\
 Content of compiled binary is Base64 encoded and used as source code.\n\
 \n\
 https://ide.judge0.com/?kS_f\n\
 ";
 
-var fsharpSource = "printfn \"hello, world\"\n";
+var fsharpSource = "printfn \"Welcome to my Online VK Compiler, Have fun !\"\n";
 
 var fortranSource = "\
 program main\n\
-    print *, \"hello, world\"\n\
+    print *, \"Welcome to my Online VK Compiler, Have fun !\"\n\
 end\n\
 ";
 
@@ -902,31 +904,31 @@ package main\n\
 import \"fmt\"\n\
 \n\
 func main() {\n\
-    fmt.Println(\"hello, world\")\n\
+    fmt.Println(\"Welcome to my Online VK Compiler, Have fun !\")\n\
 }\n\
 ";
 
-var groovySource = "println \"hello, world\"\n";
+var groovySource = "println \"Welcome to my Online VK Compiler, Have fun !\"\n";
 
-var haskellSource = "main = putStrLn \"hello, world\"";
+var haskellSource = "main = putStrLn \"Welcome to my Online VK Compiler, Have fun !\"";
 
 var javaSource = "\
 public class Main {\n\
     public static void main(String[] args) {\n\
-        System.out.println(\"hello, world\");\n\
+        System.out.println(\"Welcome to my Online VK Compiler, Have fun !\");\n\
     }\n\
 }\n\
 ";
 
-var javaScriptSource = "console.log(\"hello, world\");";
+var javaScriptSource = "console.log(\"Welcome to my Online VK Compiler, Have fun !\");";
 
 var kotlinSource = "\
 fun main() {\n\
-    println(\"hello, world\")\n\
+    println(\"Welcome to my Online VK Compiler, Have fun !\")\n\
 }\n\
 ";
 
-var luaSource = "print(\"hello, world\")";
+var luaSource = "print(\"Welcome to my Online VK Compiler, Have fun !\")";
 
 var objectiveCSource = "\
 #import <Foundation/Foundation.h>\n\
@@ -935,51 +937,51 @@ int main() {\n\
     @autoreleasepool {\n\
         char name[10];\n\
         scanf(\"%s\", name);\n\
-        NSString *message = [NSString stringWithFormat:@\"hello, %s\\n\", name];\n\
+        NSString *message = [NSString stringWithFormat:@\"Welcome to my Online VK Compiler, Have fun ! %s\\n\", name];\n\
         printf(\"%s\", message.UTF8String);\n\
     }\n\
     return 0;\n\
 }\n\
 ";
 
-var ocamlSource = "print_endline \"hello, world\"";
+var ocamlSource = "print_endline \"Welcome to my Online VK Compiler, Have fun !\"";
 
-var octaveSource = "printf(\"hello, world\\n\");";
+var octaveSource = "printf(\"Welcome to my Online VK Compiler, Have fun !\\n\");";
 
 var pascalSource = "\
 program Hello;\n\
 begin\n\
-    writeln ('hello, world')\n\
+    writeln ('Welcome to my Online VK Compiler, Have fun !')\n\
 end.\n\
 ";
 
 var perlSource = "\
 my $name = <STDIN>;\n\
-print \"hello, $name\";\n\
+print \"Welcome to my Online VK Compiler, Have fun ! $name\";\n\
 ";
 
 var phpSource = "\
 <?php\n\
-print(\"hello, world\\n\");\n\
+print(\"Welcome to my Online VK Compiler, Have fun !\\n\");\n\
 ?>\n\
 ";
 
-var plainTextSource = "hello, world\n";
+var plainTextSource = "Welcome to my Online VK Compiler, Have fun !\n";
 
 var prologSource = "\
 :- initialization(main).\n\
-main :- write('hello, world\\n').\n\
+main :- write('Welcome to my Online VK Compiler, Have fun !\\n').\n\
 ";
 
-var pythonSource = "print(\"hello, world\")";
+var pythonSource = "print(\"Welcome to my Online VK Compiler, Have fun !\")";
 
-var rSource = "cat(\"hello, world\\n\")";
+var rSource = "cat(\"Welcome to my Online VK Compiler, Have fun !\\n\")";
 
-var rubySource = "puts \"hello, world\"";
+var rubySource = "puts \"Welcome to my Online VK Compiler, Have fun !\"";
 
 var rustSource = "\
 fn main() {\n\
-    println!(\"hello, world\");\n\
+    println!(\"Welcome to my Online VK Compiler, Have fun !\");\n\
 }\n\
 ";
 
@@ -987,7 +989,7 @@ var scalaSource = "\
 object Main {\n\
     def main(args: Array[String]) = {\n\
         val name = scala.io.StdIn.readLine()\n\
-        println(\"hello, \"+ name)\n\
+        println(\"Welcome to my Online VK Compiler, Have fun ! \"+ name)\n\
     }\n\
 }\n\
 ";
@@ -1006,15 +1008,15 @@ var sqliteAdditionalFiles = "";
 var swiftSource = "\
 import Foundation\n\
 let name = readLine()\n\
-print(\"hello, \\(name!)\")\n\
+print(\"Welcome to my Online VK Compiler, Have fun ! \\(name!)\")\n\
 ";
 
-var typescriptSource = "console.log(\"hello, world\");";
+var typescriptSource = "console.log(\"Welcome to my Online VK Compiler, Have fun !\");";
 
 var vbSource = "\
 Public Module Program\n\
    Public Sub Main()\n\
-      Console.WriteLine(\"hello, world\")\n\
+      Console.WriteLine(\"Welcome to my Online VK Compiler, Have fun !\")\n\
    End Sub\n\
 End Module\n\
 ";
@@ -1028,7 +1030,7 @@ extern func void printf(char *str, ...);\n\
 \n\
 func int main()\n\
 {\n\
-    printf(\"hello, world\\n\");\n\
+    printf(\"Welcome to my Online VK Compiler, Have fun !\\n\");\n\
     return 0;\n\
 }\n\
 ";
@@ -1117,7 +1119,7 @@ print(f\"Hello from processor with rank {world_rank} out of {world_size} process
 var nimSource = "\
 # On the OnlineVK Compiler , Nim is automatically\n\
 # updated every day to the latest stable version.\n\
-echo \"hello, world\"\n\
+echo \"Welcome to my Online VK Compiler, Have fun !\"\n\
 ";
 
 var pythonForMlSource = "\
@@ -1127,7 +1129,7 @@ import pandas\n\
 import scipy\n\
 import sklearn\n\
 \n\
-print(\"hello, world\")\n\
+print(\"Welcome to my Online VK Compiler, Have fun !\")\n\
 ";
 
 var bosqueSource = "\
@@ -1154,13 +1156,13 @@ entity GenericGreeting provides Greeting {\n\
     const instance: GenericGreeting = GenericGreeting@{};\n\
 \n\
     override method sayHello(): String {\n\
-        return \"hello world\";\n\
+        return \"Welcome to my Online VK Compiler, Have fun !\";\n\
     }\n\
 }\n\
 \n\
 entity NamedGreeting provides WithName, Greeting {\n\
     override method sayHello(): String {\n\
-        return String::concat(\"hello\", \" \", this.name);\n\
+        return String::concat(\"Welcome to my Online VK Compiler, Have fun !\", \" \", this.name);\n\
     }\n\
 }\n\
 \n\
